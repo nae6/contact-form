@@ -18,7 +18,7 @@
             </tr>
             @foreach ($contacts as $contact)
             <tr class="faq-table__row">
-                <td>{{ $contact->id }}</td>
+                <td class="faq-table__id">{{ $contact->id }}</td>
                 <td>{{ $contact->created_at }}</td>
                 <td>{{ $contact->content }}</td>
             </tr>

@@ -18,17 +18,28 @@
                 Contact Form
             </a>
         </div>
-        <div class="header__nav">
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__inner">
             <ul>
                 @auth
-                <li class="header__nav--list">
+                <li class="footer__nav--list">
+                    <a href="{{ route('admin') }}">管理者ページ</a>
+                </li>
+                <li class="footer__nav--list">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit">管理者ログアウト</button>
                     </form>
                 </li>
                 @else
-                <li class="header__nav--list">
+                <li class="footer__nav--list">
                     <form method="GET" action="{{ route('login') }}">
                         @csrf
                         <button type="submit">管理者ログイン</button>
@@ -37,11 +48,7 @@
                 @endauth
             </ul>
         </div>
-    </header>
-
-    <main>
-        @yield('content')
-    </main>
+    </footer>
 </body>
 
 </html>

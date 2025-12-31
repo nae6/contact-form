@@ -16,14 +16,14 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // 未ログインは弾く（保険）
+        // 未ログインはログイン画面へ
         if (! auth()->check()) {
             return redirect()->route('login');
         }
 
-        // 管理者でなければ拒否
+        // 管理者でなければトップページへ
         if (! auth()->user()->is_admin) {
-            abort(403);
+            return redirect()->route('dashboard');
         }
 
         return $next($request);

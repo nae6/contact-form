@@ -14,7 +14,7 @@
 .faq-table {
     margin: 0 auto;
     max-width: 1230px;
-    width: 70%;
+    width: 80%;
 }
 
 .faq-table__inner {
@@ -29,6 +29,5 @@
 }
 
 .faq-table__header {
-    background: #000;
-    color: #fff;
+    background-color: #eee;
 }
