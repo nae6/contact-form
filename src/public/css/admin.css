@@ -1,0 +1,72 @@
+/* admin-link */
+.admin__link {
+    max-width: 1230px;
+    margin: 0 auto;
+    background-color: #000;
+    text-align: right;
+}
+
+.admin__link--a {
+    display: inline-block;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* main-header */
+.admin__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.admin__header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* main-table */
+.faq-table {
+    margin: 0 auto;
+    max-width: 1230px;
+    width: 80%;
+}
+
+.faq-table__inner {
+    width: 100%;
+    border: solid 1px #595959;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.faq-table__row td {
+    border: solid 1px #595959;
+    padding: 5px 7px;
+}
+
+.faq-table__header {
+    background-color: #eee;
+}
+
+.faq-table__row:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.faq-table__content {
+    text-align: left;
+}
+
+/* paginate用 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination li {
+    display: inline-block;
+}
