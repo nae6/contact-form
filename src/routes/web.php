@@ -18,3 +18,6 @@ Route::get('/admin', [AdminController::class, 'index'])
 Route::get('/dashboard', function () {
     return view('index');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/contacts/{id}', [AdminController::class, 'show'])
+    ->name('contacts.show');

@@ -30,9 +30,6 @@
             <ul>
                 @auth
                 <li class="footer__nav--list">
-                    <a href="{{ route('admin') }}">管理者ページ</a>
-                </li>
-                <li class="footer__nav--list">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit">管理者ログアウト</button>

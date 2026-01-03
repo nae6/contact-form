@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<div class="admin__link">
+    <a href="{{ route('admin') }}" class="admin__link--a">管理者ページ</a>
+    </div>
 <div class="admin__content">
     <div class="admin__header">
         <h2>問合せ内容一覧</h2>
@@ -17,14 +20,15 @@
                 <th class="faq-table__header">内容</th>
             </tr>
             @foreach ($contacts as $contact)
-            <tr class="faq-table__row">
+            <tr class="faq-table__row" onclick="location.href='{{ route('contacts.show', $contact->id) }}'">
                 <td class="faq-table__id">{{ $contact->id }}</td>
                 <td>{{ $contact->created_at }}</td>
-                <td>{{ $contact->content }}</td>
+                <td class="faq-table__content">{{ $contact->content }}</td>
             </tr>
             @endforeach
         </table>
     </div>
+    {{ $contacts->links() }}
 </div>
 
 @endsection

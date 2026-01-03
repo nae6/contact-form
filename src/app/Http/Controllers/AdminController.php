@@ -10,7 +10,14 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::select('id', 'created_at', 'content')->get();
+        $contacts = Contact::select('id', 'created_at', 'content')
+            ->paginate(5);
         return view('admin', compact('contacts'));
+    }
+
+    public function show($id)
+    {
+        $contact = Contact::findOrFail($id);
+        return view('detail', compact('contact'));
     }
 }
