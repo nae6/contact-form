@@ -5,9 +5,6 @@
 @endsection
 
 @section('content')
-<div class="admin__link">
-    <a href="{{ route('admin') }}" class="admin__link--a">管理者ページ</a>
-    </div>
 <div class="admin__content">
     <div class="admin__header">
         <h2>問合せ内容一覧</h2>
