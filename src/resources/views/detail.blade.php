@@ -25,6 +25,10 @@
                 <td class="confirm-table__text">{{ $contact->tel }}</td>
             </tr>
             <tr class="confirm-table__row">
+                <th class="confirm-table__header">お問合せ時刻</th>
+                <td class="confirm-table__text">{{ $contact->created_at }}</td>
+            </tr>
+            <tr class="confirm-table__row">
                 <th class="confirm-table__header">お問い合わせ内容</th>
                 <td class="confirm-table__text">{{ $contact->content }}</td>
             </tr>
